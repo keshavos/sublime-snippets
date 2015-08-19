@@ -3,19 +3,27 @@
 
     'use strict';
 
-    angular
+    /**
+     * @ngdoc service
+     * @name ${1:module}.models.factories:${2:factory}
+     * @description
+     * @requires ${3:dependency 1}
+     * @requires ${4:dependency 2}
+    **/
+     angular
         .module('${1:module}')
         .factory('${2:factory}', ${2:factory});
 
-    ${2:factory}.\$inject = ['${3:dependencies}']
+    ${2:factory}.\$inject = ['${3:dependency 1}', '${4:dependency 2}']
 
-    function ${2:Factory}(${3:dependencies}) {
+    function ${2:Factory}(${3:dependency 1}, ${4:dependency 2}) {
         var service = {
-            ${4:func}: ${4:func}
+            ${5:function}: ${5:function}
         };
         return service;
 
-        function ${4:function}() {
+        function ${5:function}() {
+            ${6}
         }
     }
 
