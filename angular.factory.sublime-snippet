@@ -6,17 +6,15 @@
     /**
      * @ngdoc service
      * @name ${1:module}.models.factories:${2:factory}
-     * @description
-     * @requires ${3:dependency 1}
-     * @requires ${4:dependency 2}
+     * @description ${3:description}
     **/
      angular
         .module('${1:module}')
         .factory('${2:factory}', ${2:factory});
 
-    ${2:factory}.\$inject = ['${3:dependency 1}', '${4:dependency 2}']
+    ${2:factory}.\$inject = [${4/(\$(\w+)|\w+)/'$1'/g}];
 
-    function ${2:Factory}(${3:dependency 1}, ${4:dependency 2}) {
+    function ${2:Factory}(${4:dependencies}) {
         var service = {
             ${5:function}: ${5:function}
         };

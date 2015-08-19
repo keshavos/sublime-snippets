@@ -3,18 +3,36 @@
 
     'use strict';
 
+    /**
+        * @ngdoc directive
+        * @name ${1:module}.directives:${2:directive}
+        * @description ${3:description}
+        * @restrict ${4:restrict}
+    **/
     angular
         .module('${1:module}')
         .directive('${2:directive}', ${2:directive});
 
-    function ${2:directive} (${3:dependencies}) {
+    ${2:directive}.\$inject = [${5/(\$(\w+)|\w+)/'$1'/g}];
+
+    function ${2:directive} (${5:dependencies}) {
+        // Usage:
+        //
+        // Creates:
+        //
         var directive = {
+            bindToController: true,
+            controller: ${6:Controller},
+            controllerAs: 'vm',
             link: link,
-            restrict: 'A'
+            restrict: '${4:restrict}',
+            scope: {
+            }
         };
         return directive;
 
         function link(scope, element, attrs) {
+            ${7}
         }
     }
 })();
